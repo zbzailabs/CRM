@@ -44,6 +44,7 @@ https://crm.yhi.cn/auth-callback.html
 
 - Project：`yunhe`
 - Application：`yunhe-crm`
+- Application ID：`2YxXWjXsPLgG4zvue7U75`
 - Source：GitHub 仓库
 - Build Type：Dockerfile
 - Dockerfile Path：`Dockerfile`
@@ -63,6 +64,18 @@ VITE_DISABLE_EMAIL_PASSWORD_AUTHENTICATION=false
 ```
 
 Vite 环境变量在构建时写入前端产物。修改 Supabase URL 或 publishable key 后，需要重新构建部署。
+
+也可以在本机通过 CLI 写入 Dokploy 构建参数：
+
+```bash
+set -a
+source .env.production
+set +a
+npm run crm:dokploy-configure
+dokploy application deploy --applicationId 2YxXWjXsPLgG4zvue7U75
+```
+
+`SUPABASE_SERVICE_ROLE_KEY` 和 `CRM_ADMIN_PASSWORD` 只供管理员账号脚本使用，不写入 Dokploy 前端构建参数。
 
 ## 管理员账号
 
