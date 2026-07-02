@@ -24,6 +24,6 @@ import { CRM } from "@/components/atomic-crm/root/CRM";
  *    />
  * );
  */
-const App = () => <CRM />;
+const App = () => <CRM title="云合CRM" currency="CNY" disableTelemetry />;
 
 export default App;
