@@ -19,6 +19,7 @@ __screenshots__
 .DS_Store
 .env.local
 .env.production
+.secrets/
 .env.development.local
 .env.test.local
 .env.production.local
@@ -51,4 +52,3 @@ node_modules/
 /playwright/.auth/
 
 *.lock
- 
